@@ -17,7 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(502).json({ message: "this slug already exists, noob" });
   });
 
-  return res.redirect("/createshort");
+  return res.status(200).redirect("/createshort");
 };
 
 export default handler;
