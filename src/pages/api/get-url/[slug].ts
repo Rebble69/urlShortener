@@ -11,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   if (Array.isArray(slug)) {
-    return res.status(400).json({ message: "pls only use oneslug" });
+    return res.status(400).json({ message: "pls only use one slug" });
   }
 
   const data = await prisma.shortLinks.findFirst({
